@@ -25,6 +25,11 @@ try {
 <h1> Welcome to blog site!</h1>
 <!-- Виводимо статті у тегах -->
 <div class="articles-list">
+
+  <?php if (empty($articles)): ?>
+    <!-- У випадку, якщо статтей немає - виводимо повідомлення. -->
+    Статті відсутні.
+  <?php endif; ?>
   <?php foreach ($articles as $article): ?>
     <div class="article-item">
 
