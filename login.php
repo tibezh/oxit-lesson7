@@ -1,4 +1,7 @@
 <?php
+
+$page_title = 'Login page';
+
 require('base/header.php');
 
 $user = array(
@@ -29,11 +32,12 @@ if (!empty($_POST['name']) && !empty($_POST['pass'])) {
 }
 ?>
 
+<!-- Якщо користувач немає запису у сесії, тоді виводимо йому форму. -->
 <?php if(empty($_SESSION['login'])): ?>
-  <form action="login.php" method="POST" class="form-login">
+  <form action="<?php print $_SERVER["PHP_SELF"]; ?>" method="POST" class="form-login">
     <div class="field-item">
       <label for="name">Логін</label>
-      <input type="text" name="name" id="name">
+      <input type="text" name="name" id="name" required>
     </div>
 
     <div class="field-item">
@@ -47,5 +51,6 @@ if (!empty($_POST['name']) && !empty($_POST['pass'])) {
 
 
 <?php
+// Підключаємо футер сайту.
 require('base/footer.php');
 ?>
