@@ -2,9 +2,9 @@
 
 
 $db = array(
-  'db_name' => 'db1',
-  'db_user' => 'root',
-  'db_pass' => '',
+  'db_name' => 'lessons7',
+  'db_user' => 'print_house',
+  'db_pass' => '248213',
 );
 try {
     $dsn = "mysql:host=localhost;dbname={$db['db_name']}";
