@@ -3,7 +3,7 @@
 // Підключаємо хедер сайту.
 require('base/header.php');
 // Підключаємо файл БД, адже нам необхідно вибрати статті.
-require('base/db.php');
+require('base/db.example.php');
 
 
 try {
